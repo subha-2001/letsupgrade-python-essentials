@@ -1,0 +1,14 @@
+List=['mathematics','chemist']
+List.append(20544]
+print(List)
+List1['mathematics','chemist','science']
+List1.insert(2,666)
+print(List1)
+List2[1,2,3,4,5]
+print(sum(List2))
+List3[5,6,7,1,4,8]
+print(List3.count(1))
+List4[8,4,3,7,9,88]
+print(len(List4))
+List5[5,9,37]
+print(List5.pop(0))
