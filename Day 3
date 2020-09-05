@@ -1,0 +1,22 @@
+1)//pilot
+a=int(input("Enter the pilot's altitude:"));
+if(a<=1000):
+	print("safe to land the plane")
+elif(a<5000):
+	print("come down to 1000 ft")
+elif(a>5000):
+	print("go around and try later")
+else:
+	print("enter correct data")
+
+2)//for loop
+for number in range(1,200):
+	count=0
+	for i in range(2,(number//2+1)):
+		if(number%i==0):
+			count=count+1
+			break
+	if(count==0 and number!=1):
+		print("%d" %number,end=' ')
+	
+	
