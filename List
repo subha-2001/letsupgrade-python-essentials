@@ -1,3 +1,4 @@
+1)//list
 List=['mathematics','chemist']
 List.append(20544]
 print(List)
@@ -12,3 +13,43 @@ List4[8,4,3,7,9,88]
 print(len(List4))
 List5[5,9,37]
 print(List5.pop(0))
+2)dictionary
+dict={1:'delhi',2:'tamilnadu',3:'kerala'}
+print(len(dict))
+print(dict[1])
+dict1={4:'Mumbai'}
+dict.update(dict1)
+print(dict)
+print(dict.pop(1))
+print(dict.copy())
+3)sets
+a={'apple','banana','grapes'}
+b={'cherry','guava'}
+print(len(a))
+a.remove('banana')
+print(a)
+a.update(b)
+print(a)
+c={'strawberry'}
+print (a.union(b,c))
+d={'apple','daisy'}
+print(a.intersection(a,d))
+4.tuple
+tuple=(1,2,3,8,4)
+print(len(tuple))
+print(tuple[-2])
+tup=66,8
+tupl=tuple+tup
+print(tupl)
+print(max(tuple))
+del tuple
+print("after del of tuple:")
+print(tuple)
+5)string
+str='LetsUpgrade'
+print(len(str))
+print(str.upper())
+print(str.lower())
+print(str.find('d'))
+print(str[3])
+
