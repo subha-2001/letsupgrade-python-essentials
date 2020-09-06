@@ -1,0 +1,30 @@
+Program 1:
+lower=int(input("Enter the lower range:"))
+higher=int(input("Enter the higger range:"))
+for num in range(lower,higher+1):
+	order=len(str(num))
+	sum=0
+	temp=num
+	while temp>0:
+		digit=temp%10
+		sum=sum+digit**order
+		temp=temp//10
+	if num==sum:
+		print(num)
+		break
+Program2:
+for item in range(1042000,702648265):
+            sum=0
+            temp=item
+            length=len (str(item))
+            while temp>0:
+              digit=temp%10
+              sum=digit**length
+               temp=temp//10
+            if item==Sum:
+                print(item,"is an armstrong number)
+                break
+            else:
+              print("there is no armstrong number")
+              break
+
