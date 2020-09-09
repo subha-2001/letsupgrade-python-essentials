@@ -1,3 +1,39 @@
+1)i)test_list =[1,8,6,1,5,99,4]
+sub_list =[1,1,5]
+print ("Original list: "+str(test_list))
+print ("\nOriginal sub list:"+str ( sub_list)) 
+flag=0
+if(set (sub_list). issubset (set ( test_list))):
+	flag=1		
+if (flag):
+	print("\nits a match")
+else:
+	print("\nits gone")
+Output:
+Original list: [1, 8, 6, 1, 5, 99, 4]
+Original sub list: [1, 1, 5]
+its a match
+
+ii)test_list =[1,99,12,46,74]
+sub_list =[1,1,5]
+print ("Original list: "+str(test_list))
+print ("\nOriginal sub list:"+str ( sub_list)) 
+flag=0
+if(set (sub_list). issubset (set ( test_list))):
+	flag=1		
+if (flag):
+	print("\nits a match")
+else:
+	print("\nits gone")
+Output:
+
+Original list: [1, 99, 12, 46, 74]
+
+Original sub list: [1, 1, 5]
+
+its gone
+
+
 2)def isPrime(x):
            for n in range(2,x):
            	if x%n==0:
