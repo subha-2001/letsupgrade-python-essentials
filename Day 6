@@ -31,3 +31,22 @@ After withdrawal
 1500
 
 #2)radius ,height of cone using class
+import math
+class cone():
+	def __init__(self,radius,height):
+		self.radius=radius
+		self.height=height
+	def volume(self):
+		return math.pi*(self.radius**2*self.height/3)
+	def surfacearea(self):
+		return math.pi*self.radius*(self.radius+math.sqrt((self.radius*self.radius)+(self.height*self.height)))
+r=int(input("Enter radius of cone:"))
+h=int(input("enter height of cone:"))
+obj=cone(r,h)
+print("volume of cone is :",round(obj.volume(),2))
+print("surface area is:",round(obj.surfacearea(),2))
+#Output:
+Enter radius of cone:3
+enter height of cone:8
+volume of cone is : 75.4
+surface area is: 108.8
