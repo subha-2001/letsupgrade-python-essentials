@@ -1,0 +1,43 @@
+##1)decorator function for fibonnaci
+class Fibonacci:
+
+    def __init__(self):
+        self.cache = {}
+
+    def __call__(self, n):
+        if n not in self.cache:
+            if n == 0:
+                self.cache[0] = 0
+            elif n == 1:
+                self.cache[1] = 1
+            else:
+                self.cache[n] = self.__call__(n-1) + self.__call__(n-2)
+        return self.cache[n]
+
+fib = Fibonacci()
+n=int(input("enter range:"))
+
+for i in range(n):
+    print(fib(i), end=" ")
+#Output:
+enter range: 10
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
+#2)exceptional handling
+import sys
+
+try:
+    f = open('integers.txt')
+    s = f.readline()
+    i = int(s.strip())
+except IOError as e:
+    errno, strerror = e.args
+    print("I/O error({0}): {1}".format(errno,strerror))
+    # e can be printed directly without using .args:
+    # print(e)
+except ValueError:
+    print("No valid integer in line.")
+except:
+    print("Unexpected error:", sys.exc_info()[0])
+    raise
+#output:
+I/O error(2): No such file or directory
