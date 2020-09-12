@@ -1,0 +1,64 @@
+#1)Prime number
+num=int(input("Enter a number"))
+if num > 1: 
+   for i in range(2, num):
+
+       if (num % i) == 0: 
+
+           print(num, "is not a prime number") 
+
+           break
+
+   else: 
+
+       print(num, "is a prime number") 
+
+  
+
+else: 
+
+   print(num, "is not a prime number")
+import unittest
+from prime import is_prime
+
+class PrimesTestCase(unittest.TestCase):
+    """Tests for `primes.py`."""
+
+    def test_is_five_prime(self):
+        """Is five successfully determined to be prime?"""
+        self.assertTrue(is_prime(5))
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+#2)
+print("Enter 'x' for exit.");
+print("Enter the interval (starting and ending number): ");
+start = input();
+if start == 'x':
+    exit();
+else:
+    end = input();
+    lower = int(start);
+    upper = int(end);
+    for num in range(lower, upper+1):
+        tot = 0;
+        temp = num;
+        while temp != 0:
+            dig = temp % 10;
+            tot += dig ** 3;
+            temp //= 10;
+        if num == tot:
+            print(num);
+#Output:
+Enter 'x" for exit.
+Enter the interval (starting and ending number):
+1
+1000
+
+1
+153
+370
+371
+407
