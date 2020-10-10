@@ -1,0 +1,11 @@
+n=int(input("enter a number"))
+s=0
+for i in range(n):
+	a=int(input())
+for i in range(n):
+		while(a>0):
+			s=s+a%10
+			a=a//10
+			print(s)
+	
+			
