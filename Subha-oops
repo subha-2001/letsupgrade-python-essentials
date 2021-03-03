@@ -55,3 +55,147 @@ e.eBillCal();
 e.display();
 }
 }
+Ex. No:2
+package packex;
+
+public class CurrancyDEY {
+  public double dolToRup(double dollar)
+  {
+    return dollar*68;
+   }
+   public double rupToDol(double rupee)
+   {
+     return rupee/68;
+   }
+   public double euroToRup(double euro)
+   {
+     return euro*78;
+   }
+   public double rupToEuro(double rupee)
+   {
+     return rupee/78;
+   }
+   public double yenToRup(double yen)
+   {
+     return yen*0.6;
+   }
+   public double rupToYen(double rupee)
+   {
+     return rupee/0.6;
+   }
+}
+package packex;
+public class Distance
+{
+  public String kmToMeter(double kilometer)
+  {
+    return kilometer*1000+"Meters";
+  }
+  public String meterToKM(int meter)
+  {
+    return meter/1000+"KM"+meter%1000+"Meter(s)";
+  }
+}
+package packex;
+public class TimeConversion
+{
+  public int hrsToMins(int h)
+  {
+    return h*60;
+  }
+  public int hrsToSecs(int h)
+  {
+    return hrsToMins(h)*60;
+  }
+  public int hrsMinsSecsToSecs(int h,int m,int s)
+  {
+    return h*3600+m*60+s;
+  }
+  public String minsToHrs(int m)
+  {
+    return m/60 +"Hour(s)"+ m%60+"Minute(s)";
+  }
+  public String secsToHrs(int s)
+  {
+    int h=s/3600;
+    int m=(s-(h*3600))/60;
+    int sec=(s-(h*3600)-(m*60))%60;
+    return h+"Hour(s)"+m+"Minute(s)"+sec+"Second(s)";
+   }
+}
+ package packex;
+import java.util.Scanner;
+public class DEMOCDT
+{
+  double dollar,rupee,yen,euro,km;
+  int hours,minutes,seconds,meter;
+  CurrancyDEY c=new CurrancyDEY();
+  Distance d=new Distance();
+  Scanner obj=new Scanner(System.in);
+  void getCurrancyInput()
+  {
+    System.out.println("Enter the dollar:");
+    dollar=obj.nextDouble();
+    System.out.println("Enter the euro:");
+    euro=obj.nextDouble();
+    System.out.println("Enter the yen:");
+    yen=obj.nextDouble();
+    System.out.println("Enter the rupee:");
+    rupee=obj.nextDouble();
+   }
+   void conCurrancy()
+   {
+     System.out.println("Dollar to rupee:"+Math.ceil(c.dolToRup(dollar)));
+     System.out.println("Euro to rupee:"+Math.ceil(c.euroToRup(euro)));
+     System.out.println("Yen to Rupee:"+Math.ceil(c.yenToRup(yen)));
+     System.out.println("Rupee to dollar:"+Math.ceil(c.rupToDol(rupee)));
+     System.out.println("Rupee to euro:"+Math.ceil(c.rupToEuro(rupee)));
+     System.out.println("Rupee to Yen:"+Math.ceil(c.rupToYen(rupee)));
+   }
+   void getDistanceInput()
+   {
+     System.out.println("Enter the kilometer");
+     km=obj.nextDouble();
+     System.out.println("Enter the meter:");
+     meter=obj.nextInt();
+   }
+   void conDistance()
+   {
+     System.out.println("kilometer to meters:"+d.kmToMeter(km));
+     System.out.println("Meters to kilometers:"+d.meterToKM(meter));
+   }
+   void getTimeInput()
+   {
+     System.out.println("Enter the hours");
+     hours=obj.nextInt();
+     System.out.println("Enter the minutes:");
+     minutes=obj.nextInt();
+     System.out.println("Enter the seconds:");
+     seconds=obj.nextInt();
+   }
+   TimeConversion t=new TimeConversion();
+   void conTime()
+   {
+     if(minutes<=60&&seconds<=60)
+     System.out.println("Hours,Minutes&Seconds to seconds:"+t.hrsMinsSecsToSecs(hours,minutes,seconds));
+     else
+     {
+       System.out.println("Hours to minutes:"+t.hrsToMins(hours));
+       System.out.println("Hours to Seconds:"+t.hrsToSecs(hours));
+       System.out.println("Minutes to Hours:"+t.minsToHrs(minutes));
+       System.out.println("Seconds to hours:"+t.secsToHrs(seconds));
+     }
+   }
+   public static void main(String[] args)
+   {
+     DEMOCDT obj=new DEMOCDT();
+     obj.getCurrancyInput();
+     obj.conCurrancy();
+     obj.getDistanceInput();
+     obj.conDistance();
+     obj.getTimeInput();
+     obj.conTime();
+   }
+}
+
+Ex. N0:3
