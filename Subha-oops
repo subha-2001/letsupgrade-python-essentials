@@ -461,6 +461,31 @@ if (choice==4)break;
 }
 }
 
-
-
-
+Ex. No:8
+import java.util.Scanner;
+import java.io.File;
+public class FileInfo{
+String name;
+File f1;
+void getFile(){
+Scanner input=new Scanner(System.in);
+System.out.println("Enterthefilename:");
+name=input.nextLine();
+f1=new File(name);
+}
+void showDetails(){
+System.out.println("FileName:"+f1.getName());
+System.out.println("Path:"+f1.getPath());
+System.out.println("AbsPath:"+f1.getAbsolutePath());
+System.out.println("Thisfileis:"+(f1.exists()?"Exists":"Doesnotexists"));
+System.out.println("IsReadable:"+f1.canRead());
+System.out.println("ISWritable:"+f1.canWrite());
+System.out.println("TypeofFile:"+name.substring(name.lastIndexOf(".")+1));
+System.out.println("FileSize:"+f1.length()+"bytes");
+}
+public static void main(String args[]){
+FileInfo fi=new FileInfo();
+fi.getFile();
+fi.showDetails();
+}
+}
