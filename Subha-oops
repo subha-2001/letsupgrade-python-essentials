@@ -328,19 +328,6 @@ System.out.println("Employee Gross Salary:"+gs);
 System.out.println("Employee Net Salary :"+ns);
 }
 }
-
-
-
-
-
-
-
-    	      
-
-
-
-
-
 class Professor extends Employee{
 double basicPay;
 public double getBasicPay() {
@@ -527,5 +514,57 @@ super(l,b);
 
 void printArea() {
 System.out.println("The Area of Triangle is:"+0.5*length*breadth);
+}
+}
+Ex. No:9
+import java.util.Scanner;
+import java.util.Random;
+public class MultiThreadDemo{
+public static void main(String arg[]){
+Thread t1=new Thread(new Thread1());
+t1.start();
+}
+}
+class Thread1 implements Runnable{
+Scanner obj=new Scanner(System.in);
+Random r=new Random();
+public void run(){
+try{
+System.out.println("HowManyRandomnumbertobegenerated:");
+int n=obj.nextInt();
+for(int i=1;i<=n;i++){
+int no=r.nextInt(100);
+if(no%2==0){
+Thread2 t2=new Thread2(no);
+t2.start();
+}
+else{
+Thread3 t3=new Thread3(no);
+t3.start();
+}
+Thread.sleep(1000);
+}
+}
+catch(Exception e){
+System.out.println(e);
+}
+}
+}
+class Thread2 extends Thread{
+int n1;
+Thread2(int n){
+n1=n;
+}
+public void run(){
+System.out.println("PrinttheSquareofnumbersis:"+Math.pow(n1,2));
+}
+}
+class Thread3 extends Thread{
+int n1;
+Thread3(int n){
+n1=n;
+}
+public void run(){
+System.out.println("PrinttheCuberootofnumbersis:"+Math.pow(n1,3));
 }
 }
